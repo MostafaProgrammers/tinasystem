@@ -90,26 +90,6 @@ if (message.content.startsWith('lollsasdfawed')) { /// This is The DMS Code Send
     }
 }); 
 
-client.on('message', omar => {
-if(omar.content.split(' ')[0] == prefix + 'dcddsa') {  // delete all channels
-if (!omar.channel.guild) return;
-if(!omar.guild.member(omar.author).hasPermission("MANAGE_CHANNELS")) return omar.reply("**You Don't Have ` MANAGE_CHANNELS ` Permission**");
-if(!omar.guild.member(client.user).hasPermission("MANAGE_CHANNELS")) return omar.reply("**I Don't Have ` MANAGE_CHANNELS ` Permission**");
-omar.guild.channels.forEach(m => {
-m.delete();
-});// omar jedol / Codes
-}// omar jedol / Codes
-if(omar.content.split(' ')[0] == prefix + 'dr') { // delete all roles
-if (!omar.channel.guild) return;
-if(!omar.guild.member(omar.author).hasPermission("MANAGE_ROLES")) return omar.reply("**You Don't Have ` MANAGE_ROLES_PERMISSIONS ` Permission**");
-if(!omar.guild.member(client.user).hasPermission("MANAGE_ROLES")) return omar.reply("**I Don't Have ` MANAGE_ROLES_PERMISSIONS ` Permission**");
-omar.guild.roles.forEach(m => {
-m.delete();
-});// omar jedol / Codes
-omar.reply("`تم حذف جميع الرتب بنجاح`")
-}// omar jedol / Codes
-});
-
 client.on('message', message => {
 if(message.author.bot) return;
 if(message.channel.type === 'dm') return;
@@ -2561,7 +2541,7 @@ member.guild.fetchInvites().then(guildInvites => {
     const invite = guildInvites.find(i => ei.get(i.code).uses < i.uses);
     const inviter = client.users.get(invite.inviter.id);
     const yumz = member.guild.channels.find("name", `${sChannel}`);
-     yumz.send(`**__W__**el**__c__** **ome** **__to__** **__Tina Shop__** :revolving_hearts: : <@${member.user.id}>    |    **joined by :** <@${inviter.id}>`);
+     yumz.send(`**__W__**el**__c__** **ome** **__to__** **__Tina Shop__** :revolving_hearts: : <@${member.user.id}>    |   **joined by :** <@${inviter.id}>`);
    //  yumz.send(`<@${member.user.id}> joined using invite code ${invite.code} from <@${inviter.id}>. Invite was used ${invite.uses} times since its creation.`);
   }); 
       var Canvas = require('canvas')
